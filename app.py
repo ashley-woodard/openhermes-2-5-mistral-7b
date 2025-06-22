@@ -4,7 +4,7 @@ class InferlessPythonModel:
     def initialize(self):
         model_id = "TheBloke/OpenHermes-2.5-Mistral-7B-AWQ"  # Specify the model repository ID
         # Define sampling parameters for model generation
-        self.sampling_params = SamplingParams(temperature=0.7, top_p=0.95, max_tokens=128)
+        self.sampling_params = SamplingParams(temperature=0.7, top_p=0.95, max_tokens=2000)
         # Initialize the LLM object
         self.llm = LLM(model=model_id, quantization="awq", dtype="float16")
         
